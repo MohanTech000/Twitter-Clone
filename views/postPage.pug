@@ -1,0 +1,11 @@
+extends layouts/main_layouts.pug
+
+block content 
+    script.
+        let postId = "!{postId}"
+
+    .postsContainer
+    +createPostModals(userLoggedIn)
+
+block scripts 
+    script(src="/js/postPage.js")
